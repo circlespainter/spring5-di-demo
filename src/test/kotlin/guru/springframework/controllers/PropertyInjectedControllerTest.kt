@@ -12,7 +12,7 @@ class PropertyInjectedControllerTest {
 
     @Before fun setUp() {
         propertyInjectedController = PropertyInjectedController()
-        propertyInjectedController!!.greetingService = GreetingServiceImpl()
+        propertyInjectedController!!.greetingServiceImpl = GreetingServiceImpl()
     }
 
     @Test fun testGreeting() {
