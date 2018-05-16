@@ -15,8 +15,8 @@ fun main(args: Array<String>) {
     val ctx = runApplication<DiDemoApplication>(*args)
 
     val controller = ctx.getBean("myController") as MyController
-    controller.hello()
 
+    println(controller.hello())
     println(ctx.getBean(PropertyInjectedController::class.java).sayHello())
     println(ctx.getBean(SetterInjectedController::class.java).sayHello())
     println(ctx.getBean(ConstructorInjectedController::class.java).sayHello())
