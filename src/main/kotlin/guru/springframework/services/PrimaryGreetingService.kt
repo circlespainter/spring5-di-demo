@@ -7,10 +7,8 @@ import org.springframework.stereotype.Service
 @Service
 @Primary
 @Profile("en", "default")
-class PrimaryGreetingService : GreetingService {
-    private val greetingRepository: GreetingRepository? = null
-
+class PrimaryGreetingService(private val greetingRepository: GreetingRepository) : GreetingService {
     override fun sayGreeting(): String {
-        return greetingRepository!!.englishGreeting
+        return greetingRepository.englishGreeting
     }
 }
