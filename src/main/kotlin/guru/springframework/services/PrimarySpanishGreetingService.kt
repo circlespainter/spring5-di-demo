@@ -5,8 +5,8 @@ import org.springframework.context.annotation.Profile
 import org.springframework.stereotype.Service
 
 @Service
+@Profile("es")
 @Primary
-@Profile("en")
-class PrimaryGreetingService: GreetingService {
-    override fun sayGreeting() = "Hello - Primary Greeting service"
+class PrimarySpanishGreetingService: GreetingService {
+    override fun sayGreeting() = "Servicio de Saludo Primario"
 }
